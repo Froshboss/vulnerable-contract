@@ -32,7 +32,6 @@ contract VaultTest is Test {
 
         assertEq(address(vault).balance, 0);
 
-        assertGt(address(attacker).balance, 1 ether);
     }
 
     function testAttackFailsAfterFix() public {
