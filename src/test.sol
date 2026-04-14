@@ -13,7 +13,8 @@ contract BalanceVault {
 
         (bool success, ) = msg.sender.call{value: amount}("");
         require(success, "Transfer failed");
-
+         unchecked {
         balances[msg.sender] -= amount;
     }
+}
 }
